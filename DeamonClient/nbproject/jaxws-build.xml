@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-DeamonInsurance" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/DeamonInsurance"/>
+        <property name="wsdl-DeamonInsurance" location="xml-resources/web-service-references/DeamonInsurance/wsdl/fastapps04.qut.edu.au/n8857954/DeamonInsuranceDep/DeamonInsurance.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DeamonInsurance" destdir="${build.generated.dir}/jax-wsCache/DeamonInsurance" wsdl="${wsdl-DeamonInsurance}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://fastapps04.qut.edu.au/n8857954/DeamonInsuranceDep/DeamonInsurance.svc?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-DeamonInsurance}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/DeamonInsurance"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/DeamonInsurance">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-DeamonInsurance" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/DeamonInsurance"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-DeamonSupplier" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/DeamonSupplier"/>
+        <property name="wsdl-DeamonSupplier" location="xml-resources/web-service-references/DeamonSupplier/wsdl/fastapps04.qut.edu.au/n8857954/DeamonSupplier/DeamonSupplier.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DeamonSupplier" destdir="${build.generated.dir}/jax-wsCache/DeamonSupplier" wsdl="${wsdl-DeamonSupplier}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://fastapps04.qut.edu.au/n8857954/DeamonSupplier/DeamonSupplier.svc?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-DeamonSupplier}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/DeamonSupplier"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/DeamonSupplier">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-DeamonSupplier" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/DeamonSupplier"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-n8857954DeamonWarehouse" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/n8857954DeamonWarehouse"/>
+        <property name="wsdl-n8857954DeamonWarehouse" location="xml-resources/web-service-references/n8857954DeamonWarehouse/wsdl/fastws.qut.edu.au_8080/DeamonWarehouseservice/n8857954DeamonWarehouse.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/n8857954DeamonWarehouse" destdir="${build.generated.dir}/jax-wsCache/n8857954DeamonWarehouse" wsdl="${wsdl-n8857954DeamonWarehouse}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://fastws.qut.edu.au:8080/DeamonWarehouseservice/n8857954DeamonWarehouse?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-n8857954DeamonWarehouse}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/n8857954DeamonWarehouse"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/n8857954DeamonWarehouse">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-n8857954DeamonWarehouse" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/n8857954DeamonWarehouse"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/qut/deamonwarehouse"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-DeamonInsurance, wsimport-client-DeamonSupplier, wsimport-client-n8857954DeamonWarehouse"/>
+</project>

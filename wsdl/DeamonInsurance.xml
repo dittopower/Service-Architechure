@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="DeamonInsuranceservice" targetNamespace="http://www.qut.com/DeamonInsurance" xmlns:tns="http://www.qut.com/DeamonInsurance" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+
+  <message name="lookupRequest">
+    <part name="customerid" type="xs:int"/>
+  </message>
+  
+  <message name="contributionResponse">
+    <part name="return" type="xs:int"/>
+  </message>
+  
+  <portType name="DeamonInsurance">
+    <operation name="Coverage">
+      <input message="tns:lookupRequest"/>
+      <output message="tns:contributionResponse"/>
+    </operation>
+  </portType>
+  
+  <binding name="DeamonInsurancebinding" type="tns:DeamonInsurance">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="Coverage">
+      <soap:operation soapAction="urn:DeamonInsuranceIntf-DeamonInsurance#Coverage"/>
+      <input>
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.qut.com/DeamonInsurance"/>
+      </input>
+      <output>
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.qut.com/DeamonInsurance"/>
+      </output>
+    </operation>
+  </binding>
+  
+  <service name="DeamonInsuranceservice">
+    <port name="DeamonInsurancePort" binding="tns:DeamonInsurancebinding">
+      <soap:address location="http://www.somewhere.com/DeamonInsurance"/>
+    </port>
+  </service>
+  
+</definitions>

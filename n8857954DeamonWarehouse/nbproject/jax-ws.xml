@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="n8857954DeamonWarehouse">
+      <implementation-class>DeamonWarehouse.n8857954DeamonWarehouse</implementation-class>
+      <wsdl-url>file:/G:/Google%20Drive/INB374%20-%20Enterprise%20Software%20Architecture/Assignment%202/wsdl/DeamonWarehouse.xml</wsdl-url>
+      <local-wsdl-file>DeamonWarehouse.xml.wsdl</local-wsdl-file>
+      <service-name>DeamonWarehouseservice</service-name>
+      <port-name>DeamonWarehousePort</port-name>
+      <package-name>com.qut.deamonwarehouse</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <use-provider>false</use-provider>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </service>
+  </services>
+  <clients/>
+  <jsr109>true</jsr109>
+</jax-ws>

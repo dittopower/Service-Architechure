@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/G:/Google%20Drive/INB374%20-%20Enterprise%20Software%20Architecture/Assignment%202/wsdl/DeamonWarehouse.xml" uri="src/conf/xml-resources/web-services/n8857954DeamonWarehouse/wsdl/DeamonWarehouse.xml.wsdl"/>
+</catalog>

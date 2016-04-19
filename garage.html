@@ -1,0 +1,31 @@
+<h2>Service: </h2>
+DeamonGarage
+<br>
+<h3>Service Type</h3>
+REST
+<br>
+<h3>Purpose</h3>
+To check if the garage is available and make booking for the garage.
+<br>
+<h3>Functionality</h3>
+
+<table>
+<tr><th>Operation</th><th>Usage</th><th>What it does</th><th>Constraints</th><th>Preconditions</th></tr>
+<tr><td>check
+</td><td>/check/{date}
+</td><td>Takes a given date and returns an xml response of 1 for available and 0 for not.
+</td><td>HTTP GET
+</td><td>{date} is a date string in the form <i>"YYYY-MM-DD"</i>
+</tr>
+<tr><td>make
+</td><td>/make/{date}/{id}
+</td><td>Takes a given <i>date</i> and customer <i>id</i>, Books the garage for that time and returns a generic confirmation message.
+</td><td>HTTP GET
+</td><td>{date} is a date string in the form <i>"YYYY-MM-DD"</i><br>{id} is a numerical customer id
+</tr>
+
+</table>
+<br>
+<h3>Service Address</h3>
+URL: <a href="http://fastws.qut.edu.au:8080/n8857954DeamonGarage/webresources/booking">http://fastws.qut.edu.au:8080/n8857954DeamonGarage/webresources/booking</a>
+WADL: <a href="http://fastws.qut.edu.au:8080/n8857954DeamonGarage/webresources/application.wadl">http://fastws.qut.edu.au:8080/n8857954DeamonGarage/webresources/application.wadl</a>

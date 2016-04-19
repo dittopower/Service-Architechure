@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://fastapps04.qut.edu.au/n8857954/DeamonInsuranceDep/DeamonInsurance.svc?wsdl" uri="wsdl/fastapps04.qut.edu.au/n8857954/DeamonInsuranceDep/DeamonInsurance.svc.wsdl"/>
+    <system systemId="http://fastapps04.qut.edu.au/n8857954/DeamonInsuranceDep/DeamonInsurance.svc?wsdl=wsdl0" uri="wsdl/fastapps04.qut.edu.au/n8857954/DeamonInsuranceDep/DeamonInsurance.svc.wsdl_wsdl0.wsdl"/>
+    <system systemId="http://fastapps04.qut.edu.au/n8857954/DeamonInsuranceDep/DeamonInsurance.svc?xsd=xsd0" uri="wsdl/fastapps04.qut.edu.au/n8857954/DeamonInsuranceDep/DeamonInsurance.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://fastapps04.qut.edu.au/n8857954/DeamonSupplier/DeamonSupplier.svc?wsdl" uri="wsdl/fastapps04.qut.edu.au/n8857954/DeamonSupplier/DeamonSupplier.svc.wsdl"/>
+    <system systemId="http://fastapps04.qut.edu.au/n8857954/DeamonSupplier/DeamonSupplier.svc?wsdl=wsdl0" uri="wsdl/fastapps04.qut.edu.au/n8857954/DeamonSupplier/DeamonSupplier.svc.wsdl_wsdl0.wsdl"/>
+    <system systemId="http://fastws.qut.edu.au:8080/DeamonWarehouseservice/n8857954DeamonWarehouse?wsdl" uri="wsdl/fastws.qut.edu.au_8080/DeamonWarehouseservice/n8857954DeamonWarehouse.wsdl"/>
+</catalog>

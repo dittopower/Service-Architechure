@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="DeamonWarehouseservice" targetNamespace="http://www.qut.com/DeamonWarehouse" xmlns:tns="http://www.qut.com/DeamonWarehouse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+
+  <message name="stockRequest">
+    <part name="temp" type="xs:string"/>
+  </message>
+  
+  <message name="stockResponse">
+    <part name="return" type="xs:int"/>
+  </message>
+  
+  
+  <portType name="DeamonWarehouse">
+    <operation name="Stock">
+      <input message="tns:stockRequest"/>
+      <output message="tns:stockResponse"/>
+    </operation>
+  </portType>
+  
+  <binding name="DeamonWarehousebinding" type="tns:DeamonWarehouse">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="Stock">
+      <soap:operation soapAction="urn:DeamonWarehouseIntf-DeamonWarehouse#Stock"/>
+      <input>
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.qut.com/DeamonWarehouse"/>
+      </input>
+      <output>
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.qut.com/DeamonWarehouse"/>
+      </output>
+    </operation>
+  </binding>
+  
+  <service name="DeamonWarehouseservice">
+    <port name="DeamonWarehousePort" binding="tns:DeamonWarehousebinding">
+      <soap:address location="http://www.somewhere.com/DeamonWarehouse"/>
+    </port>
+  </service>
+  
+</definitions>

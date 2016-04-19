@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="DeamonSupplierservice" targetNamespace="http://www.qut.com/DeamonSupplier" xmlns:tns="http://www.qut.com/DeamonSupplier" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+
+  <message name="partRequest">
+    <part name="part" type="xs:string"/>
+  </message>
+  
+  <message name="shipResponse">
+    <part name="return" type="xs:int"/>
+  </message>
+  
+    <message name="orderRequest">
+    <part name="part" type="xs:string"/>
+  </message>
+  
+  <message name="orderResponse">
+    <part name="return" type="xs:bool"/>
+  </message>
+  
+  <portType name="DeamonSupplier">
+    <operation name="Delay">
+      <input message="tns:partRequest"/>
+      <output message="tns:shipResponse"/>
+    </operation>
+	<operation name="Order">
+      <input message="tns:orderRequest"/>
+      <output message="tns:orderResponse"/>
+    </operation>
+  </portType>
+  
+  <binding name="DeamonSupplierbinding" type="tns:DeamonSupplier">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="Delay">
+      <soap:operation soapAction="urn:DeamonSupplierIntf-DeamonSupplier#Delay"/>
+      <input>
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.qut.com/DeamonSupplier"/>
+      </input>
+      <output>
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.qut.com/DeamonSupplier"/>
+      </output>
+    </operation>
+	<operation name="Order">
+      <soap:operation soapAction="urn:DeamonSupplierBoolf-DeamonSupplier#Order"/>
+      <input>
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.qut.com/DeamonSupplier"/>
+      </input>
+      <output>
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.qut.com/DeamonSupplier"/>
+      </output>
+    </operation>
+  </binding>
+  
+  <service name="DeamonSupplierservice">
+    <port name="DeamonSupplierPort" binding="tns:DeamonSupplierbinding">
+      <soap:address location="http://www.somewhere.com/DeamonSupplier"/>
+    </port>
+  </service>
+  
+</definitions>
